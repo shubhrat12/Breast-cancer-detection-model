@@ -17,18 +17,62 @@ Each feature is computed for the mean, standard error, and "worst" or largest va
 The project follows these key steps:
 1. **Data Exploration and Visualization** - Analyzing feature distributions and correlations
 2. **Dimensionality Reduction** - Using Principal Component Analysis (PCA) 
-3. **Model Training** - Implementing multiple classification algorithms:
-   - Logistic Regression
-   - Support Vector Machines
-   - K-Nearest Neighbors
-   - Random Forest
-   - Decision Tree
-   - Gradient Boosting
+3. **Model Training** - Implementing multiple classification algorithms
 4. **Hyperparameter Tuning** - Using grid search and randomized search
 5. **Model Evaluation** - Comparing models based on accuracy scores
 
 ## Results
-The best performing models were Logistic Regression and Linear SVM, both achieving 99.3% accuracy on the validation set. The dimensionality reduction with PCA preserved approximately 84% of the variance while reducing to just 5 principal components.
+
+### Model Performance
+| Model                 | Accuracy |
+|-----------------------|----------|
+| Logistic Regression   | 99.30%   |
+| Linear SVM            | 99.30%   |
+| Random Forest         | 99.30%   |
+| Gradient Boosting     | 98.60%   |
+| K-Nearest Neighbors   | 97.20%   |
+| Decision Tree         | 96.50%   |
+
+### PCA Analysis
+PCA was able to reduce the dimensionality from 30 features to 5 principal components while preserving 84.35% of the variance.
+
+| Principal Component | Variance Explained |
+|---------------------|-------------------|
+| PC1                 | 44.90%            |
+| PC2                 | 18.47%            |
+| PC3                 | 9.18%             |
+| PC4                 | 6.45%             |
+| PC5                 | 5.35%             |
+| **Total**           | **84.35%**        |
+
+### Hyperparameter Tuning Results
+
+#### Logistic Regression
+- Optimal parameters: `C=1, max_iter=100, penalty='l2'`
+- Validation score: 0.98
+
+#### K-Nearest Neighbors
+- Optimal parameters: `leaf_size=10, n_neighbors=3`
+- Validation score: 0.98
+
+#### SVM
+- Optimal parameters: `C=2, kernel='rbf'`
+- Validation score: 0.99
+
+#### Random Forest
+- Optimal parameters: `max_depth=7, max_features=2, max_leaf_nodes=52`
+- Validation score: 0.97
+
+## Requirements
+The project requires the following Python libraries:
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
+- plotly
+
+See `requirements.txt` for specific versions.
 
 ## Usage
 To run this project:
