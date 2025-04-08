@@ -30,17 +30,6 @@ The project follows these key steps:
 ## Results
 The best performing models were Logistic Regression and Linear SVM, both achieving 99.3% accuracy on the validation set. The dimensionality reduction with PCA preserved approximately 84% of the variance while reducing to just 5 principal components.
 
-## Requirements
-The project requires the following Python libraries:
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
-- seaborn
-- plotly
-
-See `requirements.txt` for specific versions.
-
 ## Usage
 To run this project:
 1. Clone the repository
