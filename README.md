@@ -63,17 +63,6 @@ PCA was able to reduce the dimensionality from 30 features to 5 principal compon
 - Optimal parameters: `max_depth=7, max_features=2, max_leaf_nodes=52`
 - Validation score: 0.97
 
-## Requirements
-The project requires the following Python libraries:
-- numpy
-- pandas
-- scikit-learn
-- matplotlib
-- seaborn
-- plotly
-
-See `requirements.txt` for specific versions.
-
 ## Usage
 To run this project:
 1. Clone the repository
